@@ -6,6 +6,15 @@
   
 */
 
+//auth translation
+"username" = "Username";
+"password" = "Password";
+"confirm_password" = "Confirm Password";
+"login" = "Login";
+"register" = "Register";
+"credintial_error" = "Error in username or password";
+
+//home translation
 "experience_question" = "How was your experience?";
 "notes" = "Notes";
 "phone" = "Phone number";
@@ -15,3 +24,9 @@
 "add_review" = "Add Review";
 "reviews" = "Reviews";
 "close" = "Close";
+"ok" = "OK";
+"from" = "From";
+"to" = "To";
+"review_status" = "Review Status";
+"review_date" = "Review Date";
+"review_time" = "Review Time";

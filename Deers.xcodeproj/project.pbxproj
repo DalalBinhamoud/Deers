@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E4B88FB729FFE8C4005FA850 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B88FB629FFE8C4005FA850 /* Util.swift */; };
 		E4FD9A7929F946A4009F022A /* DeersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FD9A7829F946A4009F022A /* DeersApp.swift */; };
 		E4FD9A7D29F946AA009F022A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4FD9A7C29F946AA009F022A /* Assets.xcassets */; };
 		E4FD9A8029F946AA009F022A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4FD9A7F29F946AA009F022A /* Preview Assets.xcassets */; };
@@ -48,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E4B88FB629FFE8C4005FA850 /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		E4FD9A7529F946A4009F022A /* Deers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Deers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4FD9A7829F946A4009F022A /* DeersApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeersApp.swift; sourceTree = "<group>"; };
 		E4FD9A7C29F946AA009F022A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -128,8 +130,8 @@
 				E4FD9AC529FFBFAC009F022A /* CustomComponents */,
 				E4FD9AB429F95765009F022A /* Translation */,
 				E4FD9AAD29F94A3C009F022A /* Helpers */,
-				E4FD9AA529F946F2009F022A /* Model */,
-				E4FD9AA429F946EC009F022A /* View */,
+				E4FD9AA529F946F2009F022A /* Models */,
+				E4FD9AA429F946EC009F022A /* Views */,
 				E4FD9AA829F9470A009F022A /* ViewModel */,
 				E4FD9A7829F946A4009F022A /* DeersApp.swift */,
 				E4FD9A7C29F946AA009F022A /* Assets.xcassets */,
@@ -163,23 +165,23 @@
 			path = DeersUITests;
 			sourceTree = "<group>";
 		};
-		E4FD9AA429F946EC009F022A /* View */ = {
+		E4FD9AA429F946EC009F022A /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				E4FD9ABE29FFA6BD009F022A /* HomeViews */,
 				E4FD9ABD29FFA6AC009F022A /* AuthViews */,
 				E4FD9AB229F94AB2009F022A /* MainView.swift */,
 			);
-			path = View;
+			path = Views;
 			sourceTree = "<group>";
 		};
-		E4FD9AA529F946F2009F022A /* Model */ = {
+		E4FD9AA529F946F2009F022A /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				E4FD9AA629F946FD009F022A /* Review.swift */,
 				E4FD9AC329FFBDF2009F022A /* SocialMediaIcon.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		E4FD9AA829F9470A009F022A /* ViewModel */ = {
@@ -194,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				E4FD9AAE29F94A4D009F022A /* Constants.swift */,
+				E4B88FB629FFE8C4005FA850 /* Util.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -388,6 +391,7 @@
 				E4FD9AC229FFA703009F022A /* RegisterView.swift in Sources */,
 				E4FD9AA729F946FD009F022A /* Review.swift in Sources */,
 				E4FD9AC729FFBFC3009F022A /* SocialMediaComponent.swift in Sources */,
+				E4B88FB729FFE8C4005FA850 /* Util.swift in Sources */,
 				E4FD9AB329F94AB2009F022A /* MainView.swift in Sources */,
 				E4FD9AD229FFD074009F022A /* TextExtension.swift in Sources */,
 				E4FD9AC029FFA6F1009F022A /* LoginView.swift in Sources */,

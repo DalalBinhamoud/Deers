@@ -6,6 +6,15 @@
   
 */
 
+//auth translation
+"username" = "اسم المستخدم";
+"password" = "الرقم السري";
+"confirm_password" = "تأكيد الرقم السري";
+"login" = "تسجيل الدخول";
+"register" = "التسجيل";
+"credintial_error" ="خطأ في اسم المستخدم أو كلمة المرور";
+
+//home translation
 "experience_question" = "كيف كانت تجربتك؟";
 "notes" = "الملاحظات";
 "phone" = "رقم الجوال";
@@ -15,3 +24,9 @@
 "add_review" = "إضافة تقييم";
 "reviews" = "التقييمات";
 "close" = "إغلاق";
+"ok" = "حسناً";
+"from" = "من";
+"to" = "إلى";
+"review_status" = "حالة التقييم";
+"review_date" = "تاريخ التقييم";
+"review_time" = "وقت التقييم";
