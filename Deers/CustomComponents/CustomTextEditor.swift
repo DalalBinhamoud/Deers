@@ -1,0 +1,42 @@
+//
+//  CustomTextEditor.swift
+//  Deers
+//
+//  Created by Dalal Macbook on 01/05/2023.
+//
+
+import SwiftUI
+
+struct CustomTextEditor: View {
+    @ObservedObject private var validatedTextEditor = ValidatedTextEditor()
+    @Binding var value : String
+    @State private var valueCounter = 0
+
+    var body: some View {
+        VStack(alignment: Locale.autoupdatingCurrent.languageCode == "en" ? .leading : .trailing){
+            TextEditor(text: $validatedTextEditor.reviewerInput)
+                .padding(20)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 6)
+                        .stroke(Color(.systemGray5), lineWidth: 1.0)
+                )
+                .lineLimit(Constants.maxLength.textLines)
+                .multilineTextAlignment(.trailing)
+                .onChange(of: validatedTextEditor.reviewerInput){ (value) in
+                    self.valueCounter = self.validatedTextEditor.reviewerInput.count
+                }
+
+            Text(valueCounter <= 1 ? "\(self.valueCounter) /\(Constants.maxLength.textEditor)" : "\(valueCounter) /\(Constants.maxLength.textEditor)")
+                .foregroundColor(Constants.Colors.secondaryColor)
+
+
+        }
+
+    }
+}
+
+struct CustomTextEditor_Previews: PreviewProvider {
+    static var previews: some View {
+        CustomTextEditor(value: .constant(""))
+    }
+}

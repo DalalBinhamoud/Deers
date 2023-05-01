@@ -1,0 +1,17 @@
+/* 
+  Localizable.strings
+  Deers
+
+  Created by Dalal Macbook on 26/04/2023.
+  
+*/
+
+"experience_question" = "كيف كانت تجربتك؟";
+"notes" = "الملاحظات";
+"phone" = "رقم الجوال";
+"submit" = "إرسال التقييم";
+"error" = "خطأ";
+"submit_error" = "الرجاء تحديد حالة تجربتك";
+"add_review" = "إضافة تقييم";
+"reviews" = "التقييمات";
+"close" = "إغلاق";
