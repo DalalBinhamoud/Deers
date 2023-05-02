@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		E4B88FB729FFE8C4005FA850 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B88FB629FFE8C4005FA850 /* Util.swift */; };
+		E4B88FC62A00E56C005FA850 /* riesling.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E4B88FC42A00E56C005FA850 /* riesling.ttf */; };
+		E4B88FC72A00E56C005FA850 /* readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = E4B88FC52A00E56C005FA850 /* readme.txt */; };
 		E4FD9A7929F946A4009F022A /* DeersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FD9A7829F946A4009F022A /* DeersApp.swift */; };
 		E4FD9A7D29F946AA009F022A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4FD9A7C29F946AA009F022A /* Assets.xcassets */; };
 		E4FD9A8029F946AA009F022A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4FD9A7F29F946AA009F022A /* Preview Assets.xcassets */; };
@@ -50,6 +52,9 @@
 
 /* Begin PBXFileReference section */
 		E4B88FB629FFE8C4005FA850 /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		E4B88FBD2A00DF95005FA850 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		E4B88FC42A00E56C005FA850 /* riesling.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = riesling.ttf; sourceTree = "<group>"; };
+		E4B88FC52A00E56C005FA850 /* readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.txt; sourceTree = "<group>"; };
 		E4FD9A7529F946A4009F022A /* Deers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Deers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4FD9A7829F946A4009F022A /* DeersApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeersApp.swift; sourceTree = "<group>"; };
 		E4FD9A7C29F946AA009F022A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -102,6 +107,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E4B88FC32A00E56C005FA850 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				E4B88FC42A00E56C005FA850 /* riesling.ttf */,
+				E4B88FC52A00E56C005FA850 /* readme.txt */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		E4FD9A6C29F946A4009F022A = {
 			isa = PBXGroup;
 			children = (
@@ -125,9 +139,11 @@
 		E4FD9A7729F946A4009F022A /* Deers */ = {
 			isa = PBXGroup;
 			children = (
+				E4B88FBD2A00DF95005FA850 /* Info.plist */,
 				E4FD9AD029FFD056009F022A /* Extensions */,
 				E4FD9AC829FFC6BC009F022A /* Validation */,
 				E4FD9AC529FFBFAC009F022A /* CustomComponents */,
+				E4B88FC32A00E56C005FA850 /* Fonts */,
 				E4FD9AB429F95765009F022A /* Translation */,
 				E4FD9AAD29F94A3C009F022A /* Helpers */,
 				E4FD9AA529F946F2009F022A /* Models */,
@@ -358,7 +374,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4B88FC72A00E56C005FA850 /* readme.txt in Resources */,
 				E4FD9A8029F946AA009F022A /* Preview Assets.xcassets in Resources */,
+				E4B88FC62A00E56C005FA850 /* riesling.ttf in Resources */,
 				E4FD9AB729F957C3009F022A /* Localizable.strings in Resources */,
 				E4FD9A7D29F946AA009F022A /* Assets.xcassets in Resources */,
 			);
@@ -573,6 +591,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Deers/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Deers/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -601,6 +620,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Deers/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Deers/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

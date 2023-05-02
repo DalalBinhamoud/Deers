@@ -12,7 +12,6 @@ struct LoginView: View {
     @State private var  password = ""
     @State private var showPassword = false
     @State private var showError = false
-    var util = Util()
 
     var isSigninButtonDisabled: Bool{
         [username,password].contains(where: \.isEmpty)
@@ -28,7 +27,7 @@ struct LoginView: View {
                 TextField("username", text: $username , prompt: Text(NSLocalizedString("username", comment: ""))).TextFieldStyle()
 
                 // password field
-                ZStack(alignment: util.getDir()){
+                ZStack(alignment: Util().getReverseDir()){
 
                     Group{
                         if showPassword  {
@@ -42,7 +41,7 @@ struct LoginView: View {
                         showPassword.toggle()
                     }){
                         Image(systemName: showPassword ? "eye" : "eye.slash").imageScale(.large)
-                    }.padding(util.getDirSet(), 25)
+                    }.padding(Util().getDirSet(), 25)
                 }.padding([.top])
 
                 Button(action:  {

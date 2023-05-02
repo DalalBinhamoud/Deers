@@ -13,7 +13,7 @@ struct CustomTextEditor: View {
     @State private var valueCounter = 0
 
     var body: some View {
-        VStack(alignment: Locale.autoupdatingCurrent.languageCode == "en" ? .leading : .trailing){
+        VStack(alignment: Util().getHorizontalDir()){
             TextEditor(text: $validatedTextEditor.reviewerInput)
                 .padding(20)
                 .overlay(

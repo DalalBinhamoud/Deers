@@ -11,12 +11,12 @@ extension Text {
 
     func mainTextStyle() -> some View {
         self.foregroundColor(Constants.Colors.secondaryColor)
-            .font(.system(size: Constants.customFontSize.largeTxt))
+            .font(.custom("riesling",size: Constants.customFontSize.largeTxt))
     }
 
     func labelTextStyle() -> some View {
         self.foregroundColor(Constants.Colors.secondaryColor)
-            .font(.system(size: Constants.customFontSize.subtitle))
+            .font(.custom("riesling",size: Constants.customFontSize.subtitle))
     }
 
 
@@ -24,12 +24,12 @@ extension Text {
 
 extension TextField {
     func TextFieldStyle() -> some View {
-        self.padding(25).background(RoundedRectangle(cornerRadius: 40).fill(Constants.Colors.labelColor)).multilineTextAlignment(Locale.autoupdatingCurrent.languageCode == "en" ? .leading : .trailing)
+        self.padding(25).background(RoundedRectangle(cornerRadius: 40).fill(Constants.Colors.labelColor)).multilineTextAlignment(Util().getTextDir())
     }
 }
 
 extension SecureField {
     func TextFieldStyle() -> some View {
-        self.padding(25).background(RoundedRectangle(cornerRadius: 40).fill(Constants.Colors.labelColor)).multilineTextAlignment(Locale.autoupdatingCurrent.languageCode == "en" ? .leading : .trailing)
+        self.padding(25).background(RoundedRectangle(cornerRadius: 40).fill(Constants.Colors.labelColor)).multilineTextAlignment(Util().getTextDir())
     }
 }

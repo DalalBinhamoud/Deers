@@ -29,7 +29,7 @@ struct SubmitReviewView: View {
                         }
                     }
 
-                    VStack(alignment: Locale.autoupdatingCurrent.languageCode == "en" ? .leading : .trailing){
+                    VStack(alignment:Util().getHorizontalDir()){
 
                         // note
                         Text(NSLocalizedString("notes", comment: "")).labelTextStyle()
