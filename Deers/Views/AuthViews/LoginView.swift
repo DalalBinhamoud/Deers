@@ -8,54 +8,51 @@
 import SwiftUI
 
 struct LoginView: View {
-    @State private var username = ""
-    @State private var  password = ""
     @State private var showPassword = false
     @State private var showError = false
 
-    var isSigninButtonDisabled: Bool{
-        [username,password].contains(where: \.isEmpty)
-    }
+    @ObservedObject var loginVM = LoginViewModel()
+
 
     var body: some View {
         GeometryReader{ geo in
             ZStack{
-            VStack(alignment: .center){
-                Spacer()
-                Image("background").resizable().scaledToFit().frame(width: geo.size.width * 0.3, height: geo.size.height * 0.3)
+                VStack(alignment: .center){
+                    Spacer()
+                    Image("background").resizable().scaledToFit().frame(width: geo.size.width * 0.3, height: geo.size.height * 0.3)
 
-                TextField("username", text: $username , prompt: Text(NSLocalizedString("username", comment: ""))).TextFieldStyle()
+                    TextField("email", text: $loginVM.email , prompt: Text(NSLocalizedString("email", comment: ""))).TextFieldStyle()
 
-                // password field
-                ZStack(alignment: Util().getReverseDir()){
+                    // password field
+                    CustomPasswordField(password: $loginVM.password, showPassword: $showPassword)
 
-                    Group{
-                        if showPassword  {
-                            TextField("password", text: $password,prompt: Text(NSLocalizedString("password", comment: ""))).TextFieldStyle()
-                        } else{
-                            SecureField("password", text: $password,prompt: Text(NSLocalizedString("password", comment: ""))) .TextFieldStyle()
+                    Button(action:  {
+                        Task{
+                            await loginVM.login()
                         }
+                    } ){
+                        Text(NSLocalizedString("login", comment: "")).font(.system(size: Constants.customFontSize.largeTxt)).foregroundColor(Constants.Colors.labelColor).padding(25)
+                    }.background(.black.opacity(0.3)).cornerRadius(40).padding().disabled(!loginVM.isLoginComplete).alert(NSLocalizedString("credintial_error", comment: ""), isPresented: $showError) {
+                        Button(NSLocalizedString("ok", comment: ""), role: .cancel) { }
+                    }
+                    HStack{
+                        Text(NSLocalizedString("dont_have_account", comment: ""))
+                        NavigationLink{
+                            RegisterView()
+                        } label: {
+                            Text(NSLocalizedString("register", comment: ""))
+                        }
+
                     }
 
-                    Button(action: {
-                        showPassword.toggle()
-                    }){
-                        Image(systemName: showPassword ? "eye" : "eye.slash").imageScale(.large)
-                    }.padding(Util().getDirSet(), 25)
-                }.padding([.top])
-
-                Button(action:  {
-                   print("logged in")
-                } ){
-                    Text(NSLocalizedString("login", comment: "")).font(.system(size: Constants.customFontSize.largeTxt)).foregroundColor(Constants.Colors.labelColor).padding(25)
-                }.background(.black.opacity(0.3)).cornerRadius(40).padding().disabled(isSigninButtonDisabled).alert(NSLocalizedString("credintial_error", comment: ""), isPresented: $showError) {
-                    Button(NSLocalizedString("ok", comment: ""), role: .cancel) { }
-                }
-
-                Spacer()
-            }.padding()
+                    Spacer()
+                }.padding()
             }.background(Constants.Colors.secondaryColor)
         }
+    }
+
+    func submitLogin(){
+        
     }
 }
 

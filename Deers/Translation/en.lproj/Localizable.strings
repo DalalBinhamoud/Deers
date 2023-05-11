@@ -7,12 +7,14 @@
 */
 
 //auth translation
-"username" = "Username";
+"email" = "Email";
 "password" = "Password";
 "confirm_password" = "Confirm Password";
+"confirm_password_error" = "Password mismatch";
 "login" = "Login";
 "register" = "Register";
-"credintial_error" = "Error in username or password";
+"credintial_error" = "Error in email or password";
+"dont_have_account" = "don't have an account?";
 
 //home translation
 "experience_question" = "How was your experience?";

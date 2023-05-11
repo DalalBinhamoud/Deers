@@ -8,10 +8,12 @@
 import Foundation
 
 struct Review : Identifiable{
-    let id:UUID
-    var status: Status
-    var comment: String
-    var phone : String
+    var id: String
+    var status: String
+    var date : Date
+    var time : String
+    var note: String
+    var contactNumber: String
 }
 
 

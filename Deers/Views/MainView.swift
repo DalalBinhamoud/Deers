@@ -9,8 +9,27 @@ import SwiftUI
 
 struct MainView: View {
 
+    
+
+
+
     var body: some View {
-        HomeView()
+
+
+
+        if isLoggedIn(){
+            HomeView()
+        } else{
+            LoginView()
+        }
+    }
+
+    func isLoggedIn() -> Bool{
+        let isLoggedIn = UserDefaults.standard.object(forKey: "isLoggedIn")
+        if isLoggedIn != nil{
+            return true
+        }
+        return false
     }
 }
 

@@ -12,11 +12,8 @@ import SwiftUI
 struct ReviewsView: View {
 
     @Environment(\.calendar) var calendar
-    //mock data
-    var reviews = [
-        Review(id: UUID(), status: Status(rawValue: "good")!, comment: "sss", phone: "05050"),
-        Review(id: UUID(), status: Status(rawValue: "good")!, comment: "mmm", phone: "05050"),
-    ]
+    @ObservedObject private var viewModel = ReviewViewModel()
+
     @State private var startDate = Date()
     @State private var endDate = Date()
 
@@ -34,6 +31,7 @@ struct ReviewsView: View {
         VStack{
             Spacer()
             HStack{
+                Image("")
                 Image("calendar")
                     .resizable()
                     .scaledToFit()
@@ -51,11 +49,11 @@ struct ReviewsView: View {
             Divider()
             ScrollView{
 
-                ForEach(reviews) { review in
+                ForEach(viewModel.reviews) { review in
                     LazyVGrid(columns: columns, spacing: 4) {
-                        Text(review.status.rawValue).font(.title)
-                        Text(review.phone).font(.title)
-                        Text(review.comment).font(.title).lineLimit(3).multilineTextAlignment(.trailing)
+                        Text(review.status).font(.title)
+                        Text(review.contactNumber).font(.title)
+                        Text(review.note).font(.title).lineLimit(3).multilineTextAlignment(.trailing)
                         //                    Text(formaterFunc(date:review.date)).font(.title)
                         Text("review.id").font(.title)
                     }.padding(.horizontal)
@@ -69,6 +67,8 @@ struct ReviewsView: View {
                 //                   }
 
             }
+        }.onAppear(){
+            self.viewModel.fetchData()
         }
     }
 }

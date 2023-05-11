@@ -20,6 +20,7 @@ struct CustomTextEditor: View {
                     RoundedRectangle(cornerRadius: 6)
                         .stroke(Color(.systemGray5), lineWidth: 1.0)
                 )
+                .autocapitalization(.none)
                 .lineLimit(Constants.maxLength.textLines)
                 .multilineTextAlignment(.trailing)
                 .onChange(of: validatedTextEditor.reviewerInput){ (value) in

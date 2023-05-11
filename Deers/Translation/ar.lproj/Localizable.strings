@@ -7,12 +7,14 @@
 */
 
 //auth translation
-"username" = "اسم المستخدم";
+"email" = "البريد الإلكتروني";
 "password" = "الرقم السري";
 "confirm_password" = "تأكيد الرقم السري";
+"confirm_password_error" = "الرقم السري غير متطابق";
 "login" = "تسجيل الدخول";
 "register" = "التسجيل";
-"credintial_error" ="خطأ في اسم المستخدم أو كلمة المرور";
+"credintial_error" ="خطأ في البريد الإلكتروني أو كلمة المرور";
+"dont_have_account" = "ليس لديك حساب؟";
 
 //home translation
 "experience_question" = "كيف كانت تجربتك؟";

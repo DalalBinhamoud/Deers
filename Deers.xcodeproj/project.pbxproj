@@ -7,9 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E041128DB1E2B39E0FB7B5D /* Pods_DeersTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD74544D28CCACB53BAC88A6 /* Pods_DeersTests.framework */; };
+		4D14ED413571D920303BFACB /* Pods_Deers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36F26E4003912B939D3E3CB6 /* Pods_Deers.framework */; };
+		CEE0206EDFE0BAEE31E3D8CA /* Pods_Deers_DeersUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C990D8BA2237C9E909FC123 /* Pods_Deers_DeersUITests.framework */; };
+		E4A481902A0CF77A003D49D1 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A4818F2A0CF779003D49D1 /* LoginViewModel.swift */; };
 		E4B88FB729FFE8C4005FA850 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B88FB629FFE8C4005FA850 /* Util.swift */; };
 		E4B88FC62A00E56C005FA850 /* riesling.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E4B88FC42A00E56C005FA850 /* riesling.ttf */; };
 		E4B88FC72A00E56C005FA850 /* readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = E4B88FC52A00E56C005FA850 /* readme.txt */; };
+		E4B88FC92A00EB49005FA850 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E4B88FC82A00EB49005FA850 /* GoogleService-Info.plist */; };
+		E4B88FCB2A00F252005FA850 /* CustomPasswordField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B88FCA2A00F252005FA850 /* CustomPasswordField.swift */; };
 		E4FD9A7929F946A4009F022A /* DeersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FD9A7829F946A4009F022A /* DeersApp.swift */; };
 		E4FD9A7D29F946AA009F022A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4FD9A7C29F946AA009F022A /* Assets.xcassets */; };
 		E4FD9A8029F946AA009F022A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4FD9A7F29F946AA009F022A /* Preview Assets.xcassets */; };
@@ -51,10 +57,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1C990D8BA2237C9E909FC123 /* Pods_Deers_DeersUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Deers_DeersUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		21DB40702BE326BFB4EABF22 /* Pods-Deers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Deers.release.xcconfig"; path = "Target Support Files/Pods-Deers/Pods-Deers.release.xcconfig"; sourceTree = "<group>"; };
+		36F26E4003912B939D3E3CB6 /* Pods_Deers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Deers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		68E225C9311A27DDD7D1807F /* Pods-Deers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Deers.debug.xcconfig"; path = "Target Support Files/Pods-Deers/Pods-Deers.debug.xcconfig"; sourceTree = "<group>"; };
+		C13BCE1923CDE2C77F4E110C /* Pods-Deers-DeersUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Deers-DeersUITests.debug.xcconfig"; path = "Target Support Files/Pods-Deers-DeersUITests/Pods-Deers-DeersUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		C912471393249F0D559C7788 /* Pods-DeersTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeersTests.debug.xcconfig"; path = "Target Support Files/Pods-DeersTests/Pods-DeersTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DD74544D28CCACB53BAC88A6 /* Pods_DeersTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DeersTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4A4818F2A0CF779003D49D1 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		E4B88FB629FFE8C4005FA850 /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		E4B88FBD2A00DF95005FA850 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		E4B88FC42A00E56C005FA850 /* riesling.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = riesling.ttf; sourceTree = "<group>"; };
 		E4B88FC52A00E56C005FA850 /* readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.txt; sourceTree = "<group>"; };
+		E4B88FC82A00EB49005FA850 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E4B88FCA2A00F252005FA850 /* CustomPasswordField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPasswordField.swift; sourceTree = "<group>"; };
 		E4FD9A7529F946A4009F022A /* Deers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Deers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4FD9A7829F946A4009F022A /* DeersApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeersApp.swift; sourceTree = "<group>"; };
 		E4FD9A7C29F946AA009F022A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -80,6 +96,8 @@
 		E4FD9AC929FFC6F5009F022A /* ValidatedTextEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatedTextEditor.swift; sourceTree = "<group>"; };
 		E4FD9ACB29FFC92C009F022A /* CustomTextEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextEditor.swift; sourceTree = "<group>"; };
 		E4FD9AD129FFD074009F022A /* TextExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextExtension.swift; sourceTree = "<group>"; };
+		F6C869C893BAEE8567CC0A1C /* Pods-Deers-DeersUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Deers-DeersUITests.release.xcconfig"; path = "Target Support Files/Pods-Deers-DeersUITests/Pods-Deers-DeersUITests.release.xcconfig"; sourceTree = "<group>"; };
+		FB541C6A259B54A71722746E /* Pods-DeersTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeersTests.release.xcconfig"; path = "Target Support Files/Pods-DeersTests/Pods-DeersTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D14ED413571D920303BFACB /* Pods_Deers.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +113,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E041128DB1E2B39E0FB7B5D /* Pods_DeersTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,12 +121,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEE0206EDFE0BAEE31E3D8CA /* Pods_Deers_DeersUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D6E329905B4AA8181ABF18E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				68E225C9311A27DDD7D1807F /* Pods-Deers.debug.xcconfig */,
+				21DB40702BE326BFB4EABF22 /* Pods-Deers.release.xcconfig */,
+				C13BCE1923CDE2C77F4E110C /* Pods-Deers-DeersUITests.debug.xcconfig */,
+				F6C869C893BAEE8567CC0A1C /* Pods-Deers-DeersUITests.release.xcconfig */,
+				C912471393249F0D559C7788 /* Pods-DeersTests.debug.xcconfig */,
+				FB541C6A259B54A71722746E /* Pods-DeersTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		CA724CBD47706A34417FB9F9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				36F26E4003912B939D3E3CB6 /* Pods_Deers.framework */,
+				1C990D8BA2237C9E909FC123 /* Pods_Deers_DeersUITests.framework */,
+				DD74544D28CCACB53BAC88A6 /* Pods_DeersTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E4B88FC32A00E56C005FA850 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +167,8 @@
 				E4FD9A8829F946AB009F022A /* DeersTests */,
 				E4FD9A9229F946AB009F022A /* DeersUITests */,
 				E4FD9A7629F946A4009F022A /* Products */,
+				4D6E329905B4AA8181ABF18E /* Pods */,
+				CA724CBD47706A34417FB9F9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -139,6 +185,7 @@
 		E4FD9A7729F946A4009F022A /* Deers */ = {
 			isa = PBXGroup;
 			children = (
+				E4B88FC82A00EB49005FA850 /* GoogleService-Info.plist */,
 				E4B88FBD2A00DF95005FA850 /* Info.plist */,
 				E4FD9AD029FFD056009F022A /* Extensions */,
 				E4FD9AC829FFC6BC009F022A /* Validation */,
@@ -204,6 +251,7 @@
 			isa = PBXGroup;
 			children = (
 				E4FD9AAB29F94757009F022A /* ReviewViewModel.swift */,
+				E4A4818F2A0CF779003D49D1 /* LoginViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -249,6 +297,7 @@
 			children = (
 				E4FD9AC629FFBFC3009F022A /* SocialMediaComponent.swift */,
 				E4FD9ACB29FFC92C009F022A /* CustomTextEditor.swift */,
+				E4B88FCA2A00F252005FA850 /* CustomPasswordField.swift */,
 			);
 			path = CustomComponents;
 			sourceTree = "<group>";
@@ -276,9 +325,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E4FD9A9929F946AB009F022A /* Build configuration list for PBXNativeTarget "Deers" */;
 			buildPhases = (
+				8B48CAA2672A19077B5406C5 /* [CP] Check Pods Manifest.lock */,
 				E4FD9A7129F946A4009F022A /* Sources */,
 				E4FD9A7229F946A4009F022A /* Frameworks */,
 				E4FD9A7329F946A4009F022A /* Resources */,
+				144BA22FFA682DF32938F475 /* [CP] Embed Pods Frameworks */,
+				E4A4818E2A0CE911003D49D1 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -293,6 +345,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E4FD9A9C29F946AB009F022A /* Build configuration list for PBXNativeTarget "DeersTests" */;
 			buildPhases = (
+				FEA544694A048011C8CDF517 /* [CP] Check Pods Manifest.lock */,
 				E4FD9A8129F946AB009F022A /* Sources */,
 				E4FD9A8229F946AB009F022A /* Frameworks */,
 				E4FD9A8329F946AB009F022A /* Resources */,
@@ -311,9 +364,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E4FD9A9F29F946AB009F022A /* Build configuration list for PBXNativeTarget "DeersUITests" */;
 			buildPhases = (
+				7274A45349FBB1D5EF0B91C1 /* [CP] Check Pods Manifest.lock */,
 				E4FD9A8B29F946AB009F022A /* Sources */,
 				E4FD9A8C29F946AB009F022A /* Frameworks */,
 				E4FD9A8D29F946AB009F022A /* Resources */,
+				4C73802F8B9768FD79E3BE5A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -379,6 +434,7 @@
 				E4B88FC62A00E56C005FA850 /* riesling.ttf in Resources */,
 				E4FD9AB729F957C3009F022A /* Localizable.strings in Resources */,
 				E4FD9A7D29F946AA009F022A /* Assets.xcassets in Resources */,
+				E4B88FC92A00EB49005FA850 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,6 +454,126 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		144BA22FFA682DF32938F475 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Deers/Pods-Deers-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Deers/Pods-Deers-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Deers/Pods-Deers-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4C73802F8B9768FD79E3BE5A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Deers-DeersUITests/Pods-Deers-DeersUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Deers-DeersUITests/Pods-Deers-DeersUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Deers-DeersUITests/Pods-Deers-DeersUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7274A45349FBB1D5EF0B91C1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Deers-DeersUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8B48CAA2672A19077B5406C5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Deers-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E4A4818E2A0CE911003D49D1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "TAGS=\"TODO:|FIXME:\"\nfind \"${SRCROOT}/\" \\( -name \"*.h\" -or -name \"*.m\" -or -name \"*.swift\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($TAGS).*\\$\" | perl -p -e \"s/($TAGS)/ warning: \\$1/\"\n";
+		};
+		FEA544694A048011C8CDF517 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DeersTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E4FD9A7129F946A4009F022A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -411,7 +587,9 @@
 				E4FD9AC729FFBFC3009F022A /* SocialMediaComponent.swift in Sources */,
 				E4B88FB729FFE8C4005FA850 /* Util.swift in Sources */,
 				E4FD9AB329F94AB2009F022A /* MainView.swift in Sources */,
+				E4A481902A0CF77A003D49D1 /* LoginViewModel.swift in Sources */,
 				E4FD9AD229FFD074009F022A /* TextExtension.swift in Sources */,
+				E4B88FCB2A00F252005FA850 /* CustomPasswordField.swift in Sources */,
 				E4FD9AC029FFA6F1009F022A /* LoginView.swift in Sources */,
 				E4FD9A7929F946A4009F022A /* DeersApp.swift in Sources */,
 				E4FD9ACA29FFC6F5009F022A /* ValidatedTextEditor.swift in Sources */,
@@ -583,6 +761,7 @@
 		};
 		E4FD9A9A29F946AB009F022A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68E225C9311A27DDD7D1807F /* Pods-Deers.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -602,7 +781,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.raywenderlich.Deers;
+				PRODUCT_BUNDLE_IDENTIFIER = com.deers.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -612,6 +791,7 @@
 		};
 		E4FD9A9B29F946AB009F022A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 21DB40702BE326BFB4EABF22 /* Pods-Deers.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -631,7 +811,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.raywenderlich.Deers;
+				PRODUCT_BUNDLE_IDENTIFIER = com.deers.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -641,6 +821,7 @@
 		};
 		E4FD9A9D29F946AB009F022A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C912471393249F0D559C7788 /* Pods-DeersTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -660,6 +841,7 @@
 		};
 		E4FD9A9E29F946AB009F022A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB541C6A259B54A71722746E /* Pods-DeersTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -679,6 +861,7 @@
 		};
 		E4FD9AA029F946AB009F022A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C13BCE1923CDE2C77F4E110C /* Pods-Deers-DeersUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -696,6 +879,7 @@
 		};
 		E4FD9AA129F946AB009F022A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6C869C893BAEE8567CC0A1C /* Pods-Deers-DeersUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

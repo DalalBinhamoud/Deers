@@ -6,9 +6,21 @@
 //
 
 import SwiftUI
+import Firebase
+import FirebaseCore
 
 @main
 struct DeersApp: App {
+
+    func reviewCountConfig(){
+    UserDefaults.standard.set(1, forKey: "counter")
+    }
+
+
+    init() {
+        FirebaseApp.configure()
+        reviewCountConfig()
+    }
     var body: some Scene {
         WindowGroup {
             MainView()
