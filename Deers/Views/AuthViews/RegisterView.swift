@@ -8,16 +8,9 @@
 import SwiftUI
 
 struct RegisterView: View {
-    @State private var email = ""
-    @State private var  password = ""
-    @State private var  confirmPassword = ""
-    @State private var showPassword = false
-    @State private var showConfirmPassword = false
-    @State private var showError = false
-
-    var isRegisterButtonDisabled: Bool{
-        [email,password,confirmPassword].contains(where: \.isEmpty)
-    }
+    @ObservedObject var registerVM = RegisterViewModel()
+    @Environment(\.dismiss) private var dismiss
+    @State private var showAlert = false
 
 
     var body: some View {
@@ -27,22 +20,18 @@ struct RegisterView: View {
                     Spacer()
                     Image("background").resizable().scaledToFit().frame(width: geo.size.width * 0.3, height: geo.size.height * 0.3)
 
-                    TextField("email", text: $email , prompt: Text(NSLocalizedString("email", comment: ""))).TextFieldStyle()
-
-                    // password field
-                    CustomPasswordField(password: $password, showPassword: $showPassword)
-
-                    // confirm password field
-                    CustomPasswordField(password: $confirmPassword, showPassword: $showConfirmPassword)
+                    CustomEmailField(email: $registerVM.email)
 
                     Button(action:  {
-                       print("registered")
+                        registerVM.registerEmail()
+                        showAlert.toggle()
+                        dismiss()
                     } ){
-                        Text(NSLocalizedString("register", comment: "")).font(.system(size: Constants.customFontSize.largeTxt)).foregroundColor(Constants.Colors.labelColor).padding(25)
-                    }.background(.black.opacity(0.3)).cornerRadius(40).padding().disabled(isRegisterButtonDisabled).alert(NSLocalizedString("confirm_password_error", comment: ""), isPresented: $showError) {
-                        Button(NSLocalizedString("ok", comment: ""), role: .cancel) { }
-                    }
-
+                        Text(NSLocalizedString("register", comment: "")).font(.system(size: Constants.customFontSize.largeTxt)).foregroundColor(Constants.Colors.labelColor.opacity(!registerVM.isRegisterComplete ? 0.3: 1)).padding(25)
+                    }.background(.black.opacity(0.3)).cornerRadius(40).padding().disabled(!registerVM.isRegisterComplete)
+                        .alert(isPresented: $showAlert) {
+                                    Alert(title: Text(NSLocalizedString("registration_request", comment: "")), message: Text(NSLocalizedString("registration_request_msg", comment: "")), dismissButton: .default(Text(NSLocalizedString("ok", comment: ""))))
+                                }
                     Spacer()
                 }.padding()
             }.background(Constants.Colors.secondaryColor)

@@ -11,6 +11,8 @@
 		4D14ED413571D920303BFACB /* Pods_Deers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36F26E4003912B939D3E3CB6 /* Pods_Deers.framework */; };
 		CEE0206EDFE0BAEE31E3D8CA /* Pods_Deers_DeersUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C990D8BA2237C9E909FC123 /* Pods_Deers_DeersUITests.framework */; };
 		E4A481902A0CF77A003D49D1 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A4818F2A0CF779003D49D1 /* LoginViewModel.swift */; };
+		E4A9F1F62A135E7B000694CE /* CustomEmailField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A9F1F52A135E7B000694CE /* CustomEmailField.swift */; };
+		E4A9F1F82A1363E9000694CE /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A9F1F72A1363E9000694CE /* RegisterViewModel.swift */; };
 		E4B88FB729FFE8C4005FA850 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B88FB629FFE8C4005FA850 /* Util.swift */; };
 		E4B88FC62A00E56C005FA850 /* riesling.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E4B88FC42A00E56C005FA850 /* riesling.ttf */; };
 		E4B88FC72A00E56C005FA850 /* readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = E4B88FC52A00E56C005FA850 /* readme.txt */; };
@@ -65,6 +67,8 @@
 		C912471393249F0D559C7788 /* Pods-DeersTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeersTests.debug.xcconfig"; path = "Target Support Files/Pods-DeersTests/Pods-DeersTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DD74544D28CCACB53BAC88A6 /* Pods_DeersTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DeersTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4A4818F2A0CF779003D49D1 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		E4A9F1F52A135E7B000694CE /* CustomEmailField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomEmailField.swift; sourceTree = "<group>"; };
+		E4A9F1F72A1363E9000694CE /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		E4B88FB629FFE8C4005FA850 /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		E4B88FBD2A00DF95005FA850 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		E4B88FC42A00E56C005FA850 /* riesling.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = riesling.ttf; sourceTree = "<group>"; };
@@ -252,6 +256,7 @@
 			children = (
 				E4FD9AAB29F94757009F022A /* ReviewViewModel.swift */,
 				E4A4818F2A0CF779003D49D1 /* LoginViewModel.swift */,
+				E4A9F1F72A1363E9000694CE /* RegisterViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -298,6 +303,7 @@
 				E4FD9AC629FFBFC3009F022A /* SocialMediaComponent.swift */,
 				E4FD9ACB29FFC92C009F022A /* CustomTextEditor.swift */,
 				E4B88FCA2A00F252005FA850 /* CustomPasswordField.swift */,
+				E4A9F1F52A135E7B000694CE /* CustomEmailField.swift */,
 			);
 			path = CustomComponents;
 			sourceTree = "<group>";
@@ -589,6 +595,8 @@
 				E4FD9AB329F94AB2009F022A /* MainView.swift in Sources */,
 				E4A481902A0CF77A003D49D1 /* LoginViewModel.swift in Sources */,
 				E4FD9AD229FFD074009F022A /* TextExtension.swift in Sources */,
+				E4A9F1F62A135E7B000694CE /* CustomEmailField.swift in Sources */,
+				E4A9F1F82A1363E9000694CE /* RegisterViewModel.swift in Sources */,
 				E4B88FCB2A00F252005FA850 /* CustomPasswordField.swift in Sources */,
 				E4FD9AC029FFA6F1009F022A /* LoginView.swift in Sources */,
 				E4FD9A7929F946A4009F022A /* DeersApp.swift in Sources */,
@@ -776,6 +784,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -806,6 +815,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

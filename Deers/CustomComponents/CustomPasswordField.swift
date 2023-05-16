@@ -26,7 +26,7 @@ struct CustomPasswordField: View {
                 showPassword.toggle()
             }){
                 Image(systemName: showPassword ? "eye" : "eye.slash").imageScale(.large)
-            }.padding(Util().getDirSet(), 25)
+            }.padding(Util.getDirSet(), 25)
         }.padding([.top])
     }
 }

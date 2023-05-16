@@ -6,38 +6,30 @@
 //
 
 import Foundation
-
 import FirebaseFirestore
 import FirebaseAuth
 
+@MainActor
 class LoginViewModel: ObservableObject {
-    @Published var isLoggedIn = false
     private var db = Firestore.firestore()
 
+    @Published var isLoggedIn = false
     @Published var email = ""
     @Published var password = ""
+    @Published var showError = false
 
 
-    func isEmailValid() -> Bool {
-            let emailTest = NSPredicate(format: "SELF MATCHES %@",
-                                        "^([a-zA-Z0-9_\\-\\.]+)@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.)|(([a-zA-Z0-9\\-]+\\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\\]?)$")
-            return emailTest.evaluate(with: email)
-        }
+    var areFieldsEmpty: Bool{
+        [email,password].contains(where: \.isEmpty)
+    }
 
     var isLoginComplete: Bool {
-            if !isEmailValid() {
+        if !Util.isEmailValid(email) || areFieldsEmpty {
                 return false
             }
             return true
         }
 
-    var emailPrompt: String {
-         if isEmailValid() {
-             return ""
-         } else {
-             return "Enter a valid email address"
-         }
-     }
 
     func login() async -> Bool {
       do {
@@ -48,6 +40,7 @@ class LoginViewModel: ObservableObject {
           UserDefaults.standard.set(true, forKey: "isLoggedIn")
       }
       catch {
+          self.showError.toggle()
         print("There was an issue when trying to sign in: \(error)")
       }
         return self.isLoggedIn

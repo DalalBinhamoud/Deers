@@ -83,6 +83,7 @@ extension Color {
         }
     }
 }
+
 struct Constants {
     struct Colors{
         static let primaryColor = Color(hex: "#ba952a")
@@ -110,5 +111,9 @@ struct Constants {
         static let largeTxt = CGFloat(30)
         static let title = CGFloat(24)
         static let subtitle = CGFloat(18)
+    }
+
+    struct Regex {
+        static let emailRegex = "^([a-zA-Z0-9_\\-\\.]+)@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.)|(([a-zA-Z0-9\\-]+\\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\\]?)$"
     }
 }

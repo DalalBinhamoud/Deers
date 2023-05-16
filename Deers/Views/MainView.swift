@@ -9,18 +9,14 @@ import SwiftUI
 
 struct MainView: View {
 
-    
-
-
+    @State private var navigateToHome = false
 
     var body: some View {
 
-
-
-        if isLoggedIn(){
+        if isLoggedIn() || navigateToHome {
             HomeView()
         } else{
-            LoginView()
+            LoginView(navigateToHome: $navigateToHome)
         }
     }
 

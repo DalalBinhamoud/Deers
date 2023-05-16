@@ -13,7 +13,9 @@
 "confirm_password_error" = "الرقم السري غير متطابق";
 "login" = "تسجيل الدخول";
 "register" = "التسجيل";
-"credintial_error" ="خطأ في البريد الإلكتروني أو كلمة المرور";
+"registration_request" = "تم إرسال طلبك للتسجيل";
+"registration_request_msg" = "سيتم إرسال معلومات تسجيل الدخول إلى بيريدك الإلكتروني قريباً";
+"credential_error" ="خطأ في البريد الإلكتروني أو كلمة المرور";
 "dont_have_account" = "ليس لديك حساب؟";
 
 //home translation
@@ -32,3 +34,6 @@
 "review_status" = "حالة التقييم";
 "review_date" = "تاريخ التقييم";
 "review_time" = "وقت التقييم";
+
+// validation
+"email-validation" = "الرجاء إدخال بريد إلكتروني صحيح";

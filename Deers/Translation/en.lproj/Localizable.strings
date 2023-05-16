@@ -13,7 +13,9 @@
 "confirm_password_error" = "Password mismatch";
 "login" = "Login";
 "register" = "Register";
-"credintial_error" = "Error in email or password";
+"registration_request" = "your registration request has been sent";
+"registration_request_msg" = "an email with credential will be send to you";
+"credential_error" = "wrong email or password";
 "dont_have_account" = "don't have an account?";
 
 //home translation
@@ -32,3 +34,6 @@
 "review_status" = "Review Status";
 "review_date" = "Review Date";
 "review_time" = "Review Time";
+
+// validation
+"email-validation" = "Please enter a valid email";
