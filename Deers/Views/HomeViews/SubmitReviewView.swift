@@ -13,6 +13,9 @@ struct SubmitReviewView: View {
     @State private var notes = ""
     @State private var phone = ""
     @State private var showError = false
+    @State private var noteCounter = 0
+    @ObservedObject var reviewsVM = ReviewViewModel()
+
 
     var body: some View {
         GeometryReader{ geo in
@@ -29,11 +32,11 @@ struct SubmitReviewView: View {
                         }
                     }
 
-                    VStack(alignment:Util().getHorizontalDir()){
+                    VStack(alignment:Util.getHorizontalDir()){
 
                         // note
                         Text(NSLocalizedString("notes", comment: "")).labelTextStyle()
-                        CustomTextEditor(value: $notes).padding([.bottom])
+                        CustomTextEditor(value: $notes, valueCounter: $noteCounter).padding([.bottom])
                         
                         // phone
                         Text(NSLocalizedString("phone", comment: "")).labelTextStyle()
@@ -82,6 +85,8 @@ struct SubmitReviewView: View {
         if(touchedBtnStatus == ""){
             self.showError = true
         }else{
+            reviewsVM.addReview(status: touchedBtnStatus, note: notes, contactNumber: phone)
+            self.noteCounter = 0
             self.touchedBtnStatus = ""
             self.notes = ""
             self.phone = ""

@@ -42,30 +42,26 @@ struct ReviewsView: View {
 
             LazyVGrid(columns: columns) {
                 Text(NSLocalizedString("review_status", comment: "")).mainTextStyle()
+                Text(NSLocalizedString("review_contact", comment: "")).mainTextStyle()
                 Text(NSLocalizedString("notes", comment: "")).mainTextStyle()
                 Text(NSLocalizedString("review_date", comment: "")).mainTextStyle()
-                Text(NSLocalizedString("review_time", comment: "")).mainTextStyle()
             }
             Divider()
             ScrollView{
 
                 ForEach(viewModel.reviews) { review in
-                    LazyVGrid(columns: columns, spacing: 4) {
-                        Text(review.status).font(.title)
-                        Text(review.contactNumber).font(.title)
-                        Text(review.note).font(.title).lineLimit(3).multilineTextAlignment(.trailing)
-                        //                    Text(formaterFunc(date:review.date)).font(.title)
-                        Text("review.id").font(.title)
-                    }.padding(.horizontal)
-                    Divider()
+                    if((startDate...endDate).contains(review.date) || Calendar.current.isDate(startDate, equalTo: review.date, toGranularity: .day))
+                    {
+                        LazyVGrid(columns: columns, spacing: 4) {
+                            Text(review.status).font(.title)
+                            Text(review.contactNumber).font(.title)
+                            Text(review.note).font(.title).lineLimit(3).multilineTextAlignment(.trailing)
+                            Text(review.formattedDate).font(.title)
+                        }.padding(.horizontal)
+                        Divider()
+                    }
 
                 }
-
-                // only work in iOS 16 and above
-                //            Table(reviews) {
-                //                       TableColumn("Name", value: \.comment)
-                //                   }
-
             }
         }.onAppear(){
             self.viewModel.fetchData()

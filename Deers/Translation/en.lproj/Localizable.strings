@@ -32,8 +32,8 @@
 "from" = "From";
 "to" = "To";
 "review_status" = "Review Status";
+"review_contact" = "Contact number";
 "review_date" = "Review Date";
-"review_time" = "Review Time";
 
 // validation
 "email-validation" = "Please enter a valid email";

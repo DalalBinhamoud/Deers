@@ -10,10 +10,10 @@ import SwiftUI
 struct CustomTextEditor: View {
     @ObservedObject private var validatedTextEditor = ValidatedTextEditor()
     @Binding var value : String
-    @State private var valueCounter = 0
+    @Binding var valueCounter :Int
 
     var body: some View {
-        VStack(alignment: Util().getHorizontalDir()){
+        VStack(alignment: Util.getHorizontalDir()){
             TextEditor(text: $validatedTextEditor.reviewerInput)
                 .padding(20)
                 .overlay(
@@ -25,6 +25,7 @@ struct CustomTextEditor: View {
                 .multilineTextAlignment(.trailing)
                 .onChange(of: validatedTextEditor.reviewerInput){ (value) in
                     self.valueCounter = self.validatedTextEditor.reviewerInput.count
+                    self.value = validatedTextEditor.reviewerInput
                 }
 
             Text(valueCounter <= 1 ? "\(self.valueCounter) /\(Constants.maxLength.textEditor)" : "\(valueCounter) /\(Constants.maxLength.textEditor)")
@@ -38,6 +39,6 @@ struct CustomTextEditor: View {
 
 struct CustomTextEditor_Previews: PreviewProvider {
     static var previews: some View {
-        CustomTextEditor(value: .constant(""))
+        CustomTextEditor(value: .constant(""),valueCounter: .constant(0))
     }
 }

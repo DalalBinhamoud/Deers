@@ -11,11 +11,11 @@ struct CustomEmailField: View {
     @Binding var email : String
 
     var body: some View {
-        VStack{
+        VStack(alignment: Util.getHorizontalDir()){
             TextField("email", text: $email , prompt: Text(NSLocalizedString("email", comment: ""))).TextFieldStyle()
                 .autocapitalization(.none)
                 .keyboardType(.emailAddress)
-            Text(Util.isEmailValid(email) ? "" : "\(NSLocalizedString("email-validation", comment: ""))").foregroundColor(Constants.Colors.labelColor)
+            Text(Util.isEmailValid(email) ? "" : "\(NSLocalizedString("email-validation", comment: ""))").foregroundColor(Constants.Colors.labelColor).padding(5)
             
         }
 

@@ -14,8 +14,11 @@ struct Review : Identifiable{
     var time : String
     var note: String
     var contactNumber: String
+    
+    var formattedDate: String{
+        date.formatted(date: .abbreviated, time: .omitted)
+    }
 }
-
 
 enum Status: String {
     case good = "good"

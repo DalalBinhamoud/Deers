@@ -32,8 +32,8 @@
 "from" = "من";
 "to" = "إلى";
 "review_status" = "حالة التقييم";
+"review_contact" = "رقم التواصل";
 "review_date" = "تاريخ التقييم";
-"review_time" = "وقت التقييم";
 
 // validation
 "email-validation" = "الرجاء إدخال بريد إلكتروني صحيح";
