@@ -15,7 +15,7 @@ struct CustomEmailField: View {
             TextField("email", text: $email , prompt: Text(NSLocalizedString("email", comment: ""))).TextFieldStyle()
                 .autocapitalization(.none)
                 .keyboardType(.emailAddress)
-            Text(Util.isEmailValid(email) ? "" : "\(NSLocalizedString("email-validation", comment: ""))").foregroundColor(Constants.Colors.labelColor).padding(5)
+            Text(Util.isEmailValid(email) ? "" : "\(NSLocalizedString("email_validation", comment: ""))").foregroundColor(Constants.Colors.labelColor).padding(5)
             
         }
 

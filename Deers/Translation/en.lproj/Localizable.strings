@@ -15,6 +15,7 @@
 "register" = "Register";
 "registration_request" = "your registration request has been sent";
 "registration_request_msg" = "an email with credential will be send to you";
+"required_fields_error" = "Please fillout all the fields";
 "credential_error" = "wrong email or password";
 "dont_have_account" = "don't have an account?";
 
@@ -36,4 +37,4 @@
 "review_date" = "Review Date";
 
 // validation
-"email-validation" = "Please enter a valid email";
+"email_validation" = "Please enter a valid email";

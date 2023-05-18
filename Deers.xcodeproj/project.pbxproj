@@ -7,9 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2E041128DB1E2B39E0FB7B5D /* Pods_DeersTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD74544D28CCACB53BAC88A6 /* Pods_DeersTests.framework */; };
 		4D14ED413571D920303BFACB /* Pods_Deers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36F26E4003912B939D3E3CB6 /* Pods_Deers.framework */; };
-		CEE0206EDFE0BAEE31E3D8CA /* Pods_Deers_DeersUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C990D8BA2237C9E909FC123 /* Pods_Deers_DeersUITests.framework */; };
 		E4A481902A0CF77A003D49D1 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A4818F2A0CF779003D49D1 /* LoginViewModel.swift */; };
 		E4A9F1F62A135E7B000694CE /* CustomEmailField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A9F1F52A135E7B000694CE /* CustomEmailField.swift */; };
 		E4A9F1F82A1363E9000694CE /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A9F1F72A1363E9000694CE /* RegisterViewModel.swift */; };
@@ -21,9 +19,6 @@
 		E4FD9A7929F946A4009F022A /* DeersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FD9A7829F946A4009F022A /* DeersApp.swift */; };
 		E4FD9A7D29F946AA009F022A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4FD9A7C29F946AA009F022A /* Assets.xcassets */; };
 		E4FD9A8029F946AA009F022A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4FD9A7F29F946AA009F022A /* Preview Assets.xcassets */; };
-		E4FD9A8A29F946AB009F022A /* DeersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FD9A8929F946AB009F022A /* DeersTests.swift */; };
-		E4FD9A9429F946AB009F022A /* DeersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FD9A9329F946AB009F022A /* DeersUITests.swift */; };
-		E4FD9A9629F946AB009F022A /* DeersUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FD9A9529F946AB009F022A /* DeersUITestsLaunchTests.swift */; };
 		E4FD9AA329F946E2009F022A /* SubmitReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FD9AA229F946E2009F022A /* SubmitReviewView.swift */; };
 		E4FD9AA729F946FD009F022A /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FD9AA629F946FD009F022A /* Review.swift */; };
 		E4FD9AAA29F94735009F022A /* ReviewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FD9AA929F94735009F022A /* ReviewsView.swift */; };
@@ -40,23 +35,6 @@
 		E4FD9ACC29FFC92C009F022A /* CustomTextEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FD9ACB29FFC92C009F022A /* CustomTextEditor.swift */; };
 		E4FD9AD229FFD074009F022A /* TextExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FD9AD129FFD074009F022A /* TextExtension.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		E4FD9A8629F946AB009F022A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E4FD9A6D29F946A4009F022A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E4FD9A7429F946A4009F022A;
-			remoteInfo = Deers;
-		};
-		E4FD9A9029F946AB009F022A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E4FD9A6D29F946A4009F022A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E4FD9A7429F946A4009F022A;
-			remoteInfo = Deers;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1C990D8BA2237C9E909FC123 /* Pods_Deers_DeersUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Deers_DeersUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,11 +57,6 @@
 		E4FD9A7829F946A4009F022A /* DeersApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeersApp.swift; sourceTree = "<group>"; };
 		E4FD9A7C29F946AA009F022A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E4FD9A7F29F946AA009F022A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		E4FD9A8529F946AB009F022A /* DeersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E4FD9A8929F946AB009F022A /* DeersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeersTests.swift; sourceTree = "<group>"; };
-		E4FD9A8F29F946AB009F022A /* DeersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E4FD9A9329F946AB009F022A /* DeersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeersUITests.swift; sourceTree = "<group>"; };
-		E4FD9A9529F946AB009F022A /* DeersUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeersUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E4FD9AA229F946E2009F022A /* SubmitReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitReviewView.swift; sourceTree = "<group>"; };
 		E4FD9AA629F946FD009F022A /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		E4FD9AA929F94735009F022A /* ReviewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsView.swift; sourceTree = "<group>"; };
@@ -110,22 +83,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D14ED413571D920303BFACB /* Pods_Deers.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E4FD9A8229F946AB009F022A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2E041128DB1E2B39E0FB7B5D /* Pods_DeersTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E4FD9A8C29F946AB009F022A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CEE0206EDFE0BAEE31E3D8CA /* Pods_Deers_DeersUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,8 +125,6 @@
 			isa = PBXGroup;
 			children = (
 				E4FD9A7729F946A4009F022A /* Deers */,
-				E4FD9A8829F946AB009F022A /* DeersTests */,
-				E4FD9A9229F946AB009F022A /* DeersUITests */,
 				E4FD9A7629F946A4009F022A /* Products */,
 				4D6E329905B4AA8181ABF18E /* Pods */,
 				CA724CBD47706A34417FB9F9 /* Frameworks */,
@@ -180,8 +135,6 @@
 			isa = PBXGroup;
 			children = (
 				E4FD9A7529F946A4009F022A /* Deers.app */,
-				E4FD9A8529F946AB009F022A /* DeersTests.xctest */,
-				E4FD9A8F29F946AB009F022A /* DeersUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -213,23 +166,6 @@
 				E4FD9A7F29F946AA009F022A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		E4FD9A8829F946AB009F022A /* DeersTests */ = {
-			isa = PBXGroup;
-			children = (
-				E4FD9A8929F946AB009F022A /* DeersTests.swift */,
-			);
-			path = DeersTests;
-			sourceTree = "<group>";
-		};
-		E4FD9A9229F946AB009F022A /* DeersUITests */ = {
-			isa = PBXGroup;
-			children = (
-				E4FD9A9329F946AB009F022A /* DeersUITests.swift */,
-				E4FD9A9529F946AB009F022A /* DeersUITestsLaunchTests.swift */,
-			);
-			path = DeersUITests;
 			sourceTree = "<group>";
 		};
 		E4FD9AA429F946EC009F022A /* Views */ = {
@@ -347,45 +283,6 @@
 			productReference = E4FD9A7529F946A4009F022A /* Deers.app */;
 			productType = "com.apple.product-type.application";
 		};
-		E4FD9A8429F946AB009F022A /* DeersTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E4FD9A9C29F946AB009F022A /* Build configuration list for PBXNativeTarget "DeersTests" */;
-			buildPhases = (
-				FEA544694A048011C8CDF517 /* [CP] Check Pods Manifest.lock */,
-				E4FD9A8129F946AB009F022A /* Sources */,
-				E4FD9A8229F946AB009F022A /* Frameworks */,
-				E4FD9A8329F946AB009F022A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				E4FD9A8729F946AB009F022A /* PBXTargetDependency */,
-			);
-			name = DeersTests;
-			productName = DeersTests;
-			productReference = E4FD9A8529F946AB009F022A /* DeersTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		E4FD9A8E29F946AB009F022A /* DeersUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E4FD9A9F29F946AB009F022A /* Build configuration list for PBXNativeTarget "DeersUITests" */;
-			buildPhases = (
-				7274A45349FBB1D5EF0B91C1 /* [CP] Check Pods Manifest.lock */,
-				E4FD9A8B29F946AB009F022A /* Sources */,
-				E4FD9A8C29F946AB009F022A /* Frameworks */,
-				E4FD9A8D29F946AB009F022A /* Resources */,
-				4C73802F8B9768FD79E3BE5A /* [CP] Embed Pods Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				E4FD9A9129F946AB009F022A /* PBXTargetDependency */,
-			);
-			name = DeersUITests;
-			productName = DeersUITests;
-			productReference = E4FD9A8F29F946AB009F022A /* DeersUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -398,14 +295,6 @@
 				TargetAttributes = {
 					E4FD9A7429F946A4009F022A = {
 						CreatedOnToolsVersion = 13.4;
-					};
-					E4FD9A8429F946AB009F022A = {
-						CreatedOnToolsVersion = 13.4;
-						TestTargetID = E4FD9A7429F946A4009F022A;
-					};
-					E4FD9A8E29F946AB009F022A = {
-						CreatedOnToolsVersion = 13.4;
-						TestTargetID = E4FD9A7429F946A4009F022A;
 					};
 				};
 			};
@@ -424,8 +313,6 @@
 			projectRoot = "";
 			targets = (
 				E4FD9A7429F946A4009F022A /* Deers */,
-				E4FD9A8429F946AB009F022A /* DeersTests */,
-				E4FD9A8E29F946AB009F022A /* DeersUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -441,20 +328,6 @@
 				E4FD9AB729F957C3009F022A /* Localizable.strings in Resources */,
 				E4FD9A7D29F946AA009F022A /* Assets.xcassets in Resources */,
 				E4B88FC92A00EB49005FA850 /* GoogleService-Info.plist in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E4FD9A8329F946AB009F022A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E4FD9A8D29F946AB009F022A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,45 +349,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Deers/Pods-Deers-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4C73802F8B9768FD79E3BE5A /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Deers-DeersUITests/Pods-Deers-DeersUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Deers-DeersUITests/Pods-Deers-DeersUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Deers-DeersUITests/Pods-Deers-DeersUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7274A45349FBB1D5EF0B91C1 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Deers-DeersUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		8B48CAA2672A19077B5406C5 /* [CP] Check Pods Manifest.lock */ = {
@@ -556,28 +390,6 @@
 			shellPath = /bin/sh;
 			shellScript = "TAGS=\"TODO:|FIXME:\"\nfind \"${SRCROOT}/\" \\( -name \"*.h\" -or -name \"*.m\" -or -name \"*.swift\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($TAGS).*\\$\" | perl -p -e \"s/($TAGS)/ warning: \\$1/\"\n";
 		};
-		FEA544694A048011C8CDF517 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-DeersTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -608,37 +420,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E4FD9A8129F946AB009F022A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E4FD9A8A29F946AB009F022A /* DeersTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E4FD9A8B29F946AB009F022A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E4FD9A9629F946AB009F022A /* DeersUITestsLaunchTests.swift in Sources */,
-				E4FD9A9429F946AB009F022A /* DeersUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		E4FD9A8729F946AB009F022A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = E4FD9A7429F946A4009F022A /* Deers */;
-			targetProxy = E4FD9A8629F946AB009F022A /* PBXContainerItemProxy */;
-		};
-		E4FD9A9129F946AB009F022A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = E4FD9A7429F946A4009F022A /* Deers */;
-			targetProxy = E4FD9A9029F946AB009F022A /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		E4FD9AB929F957C3009F022A /* Localizable.strings */ = {
@@ -774,8 +556,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_ASSET_PATHS = "\"Deers/Preview Content\"";
+				DEVELOPMENT_TEAM = 558X4RCVR9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Deers/Info.plist;
@@ -789,8 +572,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.deers.app;
+				MARKETING_VERSION = 2.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.deers.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -805,8 +588,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_ASSET_PATHS = "\"Deers/Preview Content\"";
+				DEVELOPMENT_TEAM = 558X4RCVR9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Deers/Info.plist;
@@ -820,88 +604,12 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.deers.app;
+				MARKETING_VERSION = 2.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.deers.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		E4FD9A9D29F946AB009F022A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C912471393249F0D559C7788 /* Pods-DeersTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.raywenderlich.DeersTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Deers.app/Deers";
-			};
-			name = Debug;
-		};
-		E4FD9A9E29F946AB009F022A /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FB541C6A259B54A71722746E /* Pods-DeersTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.raywenderlich.DeersTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Deers.app/Deers";
-			};
-			name = Release;
-		};
-		E4FD9AA029F946AB009F022A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C13BCE1923CDE2C77F4E110C /* Pods-Deers-DeersUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.raywenderlich.DeersUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Deers;
-			};
-			name = Debug;
-		};
-		E4FD9AA129F946AB009F022A /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F6C869C893BAEE8567CC0A1C /* Pods-Deers-DeersUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.raywenderlich.DeersUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Deers;
 			};
 			name = Release;
 		};
@@ -922,24 +630,6 @@
 			buildConfigurations = (
 				E4FD9A9A29F946AB009F022A /* Debug */,
 				E4FD9A9B29F946AB009F022A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E4FD9A9C29F946AB009F022A /* Build configuration list for PBXNativeTarget "DeersTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E4FD9A9D29F946AB009F022A /* Debug */,
-				E4FD9A9E29F946AB009F022A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E4FD9A9F29F946AB009F022A /* Build configuration list for PBXNativeTarget "DeersUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E4FD9AA029F946AB009F022A /* Debug */,
-				E4FD9AA129F946AB009F022A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

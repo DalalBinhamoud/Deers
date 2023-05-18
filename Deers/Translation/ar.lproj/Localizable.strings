@@ -15,6 +15,7 @@
 "register" = "التسجيل";
 "registration_request" = "تم إرسال طلبك للتسجيل";
 "registration_request_msg" = "سيتم إرسال معلومات تسجيل الدخول إلى بيريدك الإلكتروني قريباً";
+"required_fields_error" = "الرجاء تعبئة جميع الحقول";
 "credential_error" ="خطأ في البريد الإلكتروني أو كلمة المرور";
 "dont_have_account" = "ليس لديك حساب؟";
 
@@ -36,4 +37,4 @@
 "review_date" = "تاريخ التقييم";
 
 // validation
-"email-validation" = "الرجاء إدخال بريد إلكتروني صحيح";
+"email_validation" = "الرجاء إدخال بريد إلكتروني صحيح";

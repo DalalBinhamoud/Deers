@@ -10,6 +10,8 @@ import SwiftUI
 struct LoginView: View {
     @State private var showPassword = false
     @Binding var navigateToHome:Bool
+    @State private var showError = false
+    @State private var errorMsg = ""
     @ObservedObject var loginVM = LoginViewModel()
 
 
@@ -28,14 +30,23 @@ struct LoginView: View {
 
                         Button(action:  {
                             Task{
-                              var res = await loginVM.login()
-                                if res {
-                                    navigateToHome.toggle()
+                                if loginVM.isLoginComplete {
+                                    var res = await loginVM.login()
+                                      if res {
+                                          navigateToHome.toggle()
+                                      }
+                                } else if  loginVM.areFieldsEmpty {
+                                    showError.toggle()
+                                    errorMsg = "required_fields_error"
+                                } else if !Util.isEmailValid(loginVM.email){
+                                    showError.toggle()
+                                    errorMsg = "email_validation"
                                 }
+
                             }
                         } ){
-                            Text(NSLocalizedString("login", comment: "")).font(.system(size: Constants.customFontSize.largeTxt)).foregroundColor(Constants.Colors.labelColor.opacity(!loginVM.isLoginComplete ? 0.3: 1)).padding(25)
-                        }.background(.black.opacity(0.3)).cornerRadius(40).padding().disabled(!loginVM.isLoginComplete).alert(NSLocalizedString("credential_error", comment: ""), isPresented: $loginVM.showError) {
+                            Text(NSLocalizedString("login", comment: "")).font(.system(size: Constants.customFontSize.largeTxt)).foregroundColor(Constants.Colors.labelColor).padding(25)
+                        }.background(.black.opacity(0.3)).cornerRadius(40).padding().alert(NSLocalizedString("credential_error", comment: ""), isPresented: $loginVM.showError) {
                             Button(NSLocalizedString("ok", comment: ""), role: .cancel) { }
                         }
                         HStack{
@@ -51,6 +62,11 @@ struct LoginView: View {
                         Spacer()
                     }.padding()
                 }.background(Constants.Colors.secondaryColor)
+
+            }  .alert(NSLocalizedString("error", comment: ""), isPresented: $showError){
+                Button(NSLocalizedString("close", comment: "")){}
+            } message:{
+                Text(NSLocalizedString(errorMsg, comment: ""))
             }
         }
 
