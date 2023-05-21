@@ -13,9 +13,10 @@
 "confirm_password_error" = "الرقم السري غير متطابق";
 "login" = "تسجيل الدخول";
 "register" = "التسجيل";
-"registration_request" = "تم إرسال طلبك للتسجيل";
-"registration_request_msg" = "سيتم إرسال معلومات تسجيل الدخول إلى بيريدك الإلكتروني قريباً";
+"registration_request" = "تم التسجيل بنجاح";
+"registration_request_msg" = "الرجاء تسجيل الدخول الآن";
 "required_fields_error" = "الرجاء تعبئة جميع الحقول";
+"password_mismatch_error" = "الرقم السري غير متطابق";
 "credential_error" ="خطأ في البريد الإلكتروني أو كلمة المرور";
 "dont_have_account" = "ليس لديك حساب؟";
 
@@ -38,3 +39,4 @@
 
 // validation
 "email_validation" = "الرجاء إدخال بريد إلكتروني صحيح";
+"email_already_exist" = "البريد الإلكتروني مستخدم من قبل حساب آخر";

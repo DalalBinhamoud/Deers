@@ -45,7 +45,7 @@ struct LoginView: View {
 
                             }
                         } ){
-                            Text(NSLocalizedString("login", comment: "")).font(.system(size: Constants.customFontSize.largeTxt)).foregroundColor(Constants.Colors.labelColor).padding(25)
+                            Text(NSLocalizedString("login", comment: "")).btnLabelTextStyle()
                         }.background(.black.opacity(0.3)).cornerRadius(40).padding().alert(NSLocalizedString("credential_error", comment: ""), isPresented: $loginVM.showError) {
                             Button(NSLocalizedString("ok", comment: ""), role: .cancel) { }
                         }

@@ -10,6 +10,8 @@ import SwiftUI
 struct RegisterView: View {
     @ObservedObject var registerVM = RegisterViewModel()
     @Environment(\.dismiss) private var dismiss
+    @State private var showPassword = false
+    @State private var showConfirmPassword = false
     @State private var showAlert = false
     @State private var showError = false
     @State private var errorMsg = ""
@@ -24,22 +26,39 @@ struct RegisterView: View {
 
                     CustomEmailField(email: $registerVM.email)
 
-                    Button(action:  {
+                    // password field
+                    CustomPasswordField(password: $registerVM.password, showPassword: $showPassword)
 
-                        if registerVM.isRegisterComplete {
-                            registerVM.registerEmail()
-                            showAlert.toggle()
-                            dismiss()
-                        }  else if  registerVM.isFieldEmpty {
-                            showError.toggle()
-                            errorMsg = "required_fields_error"
-                        } else if !Util.isEmailValid(registerVM.email){
-                            showError.toggle()
-                            errorMsg = "email_validation"
+                    // confirm password field
+                    CustomPasswordField(password: $registerVM.confirmPW, showPassword: $showConfirmPassword)
+
+                    Button(action:  {
+                        Task{
+                            if registerVM.isRegisterComplete {
+                               var res = await registerVM.signUp()
+                                if res {
+                                    showAlert.toggle()
+                                    registerVM.email = ""
+                                    registerVM.password = ""
+                                    registerVM.confirmPW = ""
+                                    dismiss()
+                                }
+                            } else if  registerVM.arFieldsEmpty {
+                                showError.toggle()
+                                errorMsg = "required_fields_error"
+
+                            } else if  !registerVM.isPasswordMatch {
+                                showError.toggle()
+                                errorMsg = "password_mismatch_error"
+
+                            } else if !Util.isEmailValid(registerVM.email){
+                                showError.toggle()
+                                errorMsg = "email_validation"
+                            }
                         }
 
                     } ){
-                        Text(NSLocalizedString("register", comment: "")).font(.system(size: Constants.customFontSize.largeTxt)).foregroundColor(Constants.Colors.labelColor.opacity(!registerVM.isRegisterComplete ? 0.3: 1)).padding(25)
+                        Text(NSLocalizedString("register", comment: "")).btnLabelTextStyle()
                     }.background(.black.opacity(0.3)).cornerRadius(40).padding()
                         .alert(NSLocalizedString("error", comment: ""), isPresented: $showError){
                             Button(NSLocalizedString("close", comment: "")){}
@@ -48,6 +67,11 @@ struct RegisterView: View {
                         }
                         .alert(isPresented: $showAlert) {
                             Alert(title: Text(NSLocalizedString("registration_request", comment: "")), message: Text(NSLocalizedString("registration_request_msg", comment: "")), dismissButton: .default(Text(NSLocalizedString("ok", comment: ""))))
+                        }
+                        .alert(NSLocalizedString("error", comment: ""), isPresented: $registerVM.showErrorOfBE){
+                            Button(NSLocalizedString("close", comment: "")){}
+                        } message:{
+                            Text(registerVM.showErrorMsgOfBE)
                         }
                     Spacer()
                 }.padding()

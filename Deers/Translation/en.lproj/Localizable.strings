@@ -13,9 +13,10 @@
 "confirm_password_error" = "Password mismatch";
 "login" = "Login";
 "register" = "Register";
-"registration_request" = "your registration request has been sent";
-"registration_request_msg" = "an email with credential will be send to you";
+"registration_request" = "User Registered Successfully";
+"registration_request_msg" = "Please login now";
 "required_fields_error" = "Please fillout all the fields";
+"password_mismatch_error" = "Password mismatch";
 "credential_error" = "wrong email or password";
 "dont_have_account" = "don't have an account?";
 
@@ -38,3 +39,4 @@
 
 // validation
 "email_validation" = "Please enter a valid email";
+"email_already_exist" = "email address is already in use by another accoun";

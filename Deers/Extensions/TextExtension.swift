@@ -19,6 +19,9 @@ extension Text {
             .font(.custom("riesling",size: Constants.customFontSize.subtitle))
     }
 
+    func btnLabelTextStyle() -> some View {
+        self.font(.system(size: Constants.customFontSize.largeTxt)).foregroundColor(Constants.Colors.labelColor).padding(25)
+    }
 
 }
 

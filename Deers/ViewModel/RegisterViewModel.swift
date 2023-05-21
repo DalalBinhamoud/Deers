@@ -7,18 +7,32 @@
 
 import Foundation
 import FirebaseFirestore
+import FirebaseAuth
 
+@MainActor
 class RegisterViewModel: ObservableObject {
     private var db = Firestore.firestore()
     @Published var email = ""
+    @Published var password = ""
+    @Published var confirmPW = ""
+    @Published var showErrorOfBE = false
+    @Published var showErrorMsgOfBE = ""
     var reviewCounter =  UserDefaults.standard.object(forKey: "counter") as! Int
 
-    var isFieldEmpty: Bool{
-        [email].contains(where: \.isEmpty)
+    var arFieldsEmpty: Bool{
+        [email, password, confirmPW ].contains(where: \.isEmpty)
+    }
+
+    var isPasswordMatch: Bool{
+        if password == confirmPW {
+            return true
+        } else {
+            return false
+        }
     }
 
     var isRegisterComplete: Bool {
-        if !Util.isEmailValid(email) || isFieldEmpty{
+        if !Util.isEmailValid(email) || arFieldsEmpty || !isPasswordMatch {
             return false
         } else {
             return true
@@ -26,19 +40,19 @@ class RegisterViewModel: ObservableObject {
     }
 
 
-    func registerEmail(){
-        self.reviewCounter = self.reviewCounter + 1
-        UserDefaults.standard.set( (self.reviewCounter), forKey: "counter")
-        db.collection("Customer_Email").addDocument(data: ["id": self.reviewCounter, "email": email, "active": false]){ error in
+    func signUp() async -> Bool{
+        do{
+            let authResult = try await Auth.auth().createUser(withEmail: email, password: password)
 
-            if error == nil{
-                //no errors
-                UserDefaults.standard.set( self.reviewCounter, forKey: "counter")
-            }else {
-                //handle error
+            if authResult != nil {
+                self.db.collection("Users").addDocument(data: ["id": authResult.user.uid, "email": authResult.user.email])
             }
-
+        } catch{
+            print("an error occured: \(error.localizedDescription)")
+            self.showErrorMsgOfBE = error.localizedDescription
+            self.showErrorOfBE.toggle()
+            return false
         }
-        
+        return true
     }
 }
