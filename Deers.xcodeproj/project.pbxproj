@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		0C0A342D0DCEA7299D39331A /* Pods_Deers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D48BCA3C187D9047196857A3 /* Pods_Deers.framework */; };
 		55B7D508A9CD05567A9823A3 /* Pods_DeersTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82933C509F15FD3DAECE11EC /* Pods_DeersTests.framework */; };
+		E42F98792C2FED3D00B0076B /* Routes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42F98782C2FED3D00B0076B /* Routes.swift */; };
+		E42F987C2C2FEE3C00B0076B /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42F987B2C2FEE3C00B0076B /* Router.swift */; };
+		E42F987E2C2FF28800B0076B /* RouterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42F987D2C2FF28800B0076B /* RouterView.swift */; };
+		E42F98812C2FF3F300B0076B /* AppCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42F98802C2FF3F300B0076B /* AppCoordinatorView.swift */; };
 		E4A481902A0CF77A003D49D1 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A4818F2A0CF779003D49D1 /* LoginViewModel.swift */; };
 		E4A9F1F62A135E7B000694CE /* CustomEmailField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A9F1F52A135E7B000694CE /* CustomEmailField.swift */; };
 		E4A9F1F82A1363E9000694CE /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A9F1F72A1363E9000694CE /* RegisterViewModel.swift */; };
@@ -25,7 +29,6 @@
 		E4FD9AAA29F94735009F022A /* ReviewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FD9AA929F94735009F022A /* ReviewsView.swift */; };
 		E4FD9AAC29F94757009F022A /* ReviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FD9AAB29F94757009F022A /* ReviewViewModel.swift */; };
 		E4FD9AAF29F94A4D009F022A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FD9AAE29F94A4D009F022A /* Constants.swift */; };
-		E4FD9AB329F94AB2009F022A /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FD9AB229F94AB2009F022A /* MainView.swift */; };
 		E4FD9AB729F957C3009F022A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E4FD9AB929F957C3009F022A /* Localizable.strings */; };
 		E4FD9ABC29FFA69C009F022A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FD9ABB29FFA69C009F022A /* HomeView.swift */; };
 		E4FD9AC029FFA6F1009F022A /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FD9ABF29FFA6F1009F022A /* LoginView.swift */; };
@@ -53,6 +56,10 @@
 		82933C509F15FD3DAECE11EC /* Pods_DeersTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DeersTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D48BCA3C187D9047196857A3 /* Pods_Deers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Deers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2D631B828C6BA96DB7F93C8 /* Pods-Deers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Deers.release.xcconfig"; path = "Target Support Files/Pods-Deers/Pods-Deers.release.xcconfig"; sourceTree = "<group>"; };
+		E42F98782C2FED3D00B0076B /* Routes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routes.swift; sourceTree = "<group>"; };
+		E42F987B2C2FEE3C00B0076B /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		E42F987D2C2FF28800B0076B /* RouterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterView.swift; sourceTree = "<group>"; };
+		E42F98802C2FF3F300B0076B /* AppCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorView.swift; sourceTree = "<group>"; };
 		E4A4818F2A0CF779003D49D1 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		E4A9F1F52A135E7B000694CE /* CustomEmailField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomEmailField.swift; sourceTree = "<group>"; };
 		E4A9F1F72A1363E9000694CE /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
@@ -76,7 +83,6 @@
 		E4FD9AA929F94735009F022A /* ReviewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsView.swift; sourceTree = "<group>"; };
 		E4FD9AAB29F94757009F022A /* ReviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewModel.swift; sourceTree = "<group>"; };
 		E4FD9AAE29F94A4D009F022A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		E4FD9AB229F94AB2009F022A /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		E4FD9AB829F957C3009F022A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E4FD9ABA29F95819009F022A /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E4FD9ABB29FFA69C009F022A /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -147,6 +153,7 @@
 		E412F9882C2F1FDB00CB24C5 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				E42F987A2C2FEE1B00B0076B /* Routing */,
 				E412F98B2C2F218500CB24C5 /* Features */,
 				E412F98A2C2F214F00CB24C5 /* Utilities */,
 				E412F9892C2F210600CB24C5 /* UI */,
@@ -175,6 +182,7 @@
 		E412F98B2C2F218500CB24C5 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				E42F987F2C2FF3CE00B0076B /* Coordinator */,
 				E412F9912C2F220F00CB24C5 /* Home */,
 				E412F9902C2F220600CB24C5 /* Auth */,
 				E412F98C2C2F218D00CB24C5 /* Main */,
@@ -185,7 +193,6 @@
 		E412F98C2C2F218D00CB24C5 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				E4FD9AB229F94AB2009F022A /* MainView.swift */,
 				E4FD9A7829F946A4009F022A /* DeersApp.swift */,
 			);
 			path = Main;
@@ -244,6 +251,24 @@
 				E4FD9AA229F946E2009F022A /* SubmitReviewView.swift */,
 			);
 			path = SubmitReview;
+			sourceTree = "<group>";
+		};
+		E42F987A2C2FEE1B00B0076B /* Routing */ = {
+			isa = PBXGroup;
+			children = (
+				E42F98782C2FED3D00B0076B /* Routes.swift */,
+				E42F987B2C2FEE3C00B0076B /* Router.swift */,
+				E42F987D2C2FF28800B0076B /* RouterView.swift */,
+			);
+			path = Routing;
+			sourceTree = "<group>";
+		};
+		E42F987F2C2FF3CE00B0076B /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				E42F98802C2FF3F300B0076B /* AppCoordinatorView.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 		E4B88FC32A00E56C005FA850 /* Fonts */ = {
@@ -569,6 +594,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E42F987C2C2FEE3C00B0076B /* Router.swift in Sources */,
 				E4FD9AA329F946E2009F022A /* SubmitReviewView.swift in Sources */,
 				E4FD9AC429FFBDF2009F022A /* SocialMediaIcon.swift in Sources */,
 				E4FD9ACC29FFC92C009F022A /* CustomTextEditor.swift in Sources */,
@@ -576,9 +602,10 @@
 				E4FD9AA729F946FD009F022A /* Review.swift in Sources */,
 				E4FD9AC729FFBFC3009F022A /* SocialMediaComponent.swift in Sources */,
 				E4B88FB729FFE8C4005FA850 /* Util.swift in Sources */,
-				E4FD9AB329F94AB2009F022A /* MainView.swift in Sources */,
 				E4A481902A0CF77A003D49D1 /* LoginViewModel.swift in Sources */,
 				E4FD9AD229FFD074009F022A /* TextExtension.swift in Sources */,
+				E42F98812C2FF3F300B0076B /* AppCoordinatorView.swift in Sources */,
+				E42F98792C2FED3D00B0076B /* Routes.swift in Sources */,
 				E4A9F1F62A135E7B000694CE /* CustomEmailField.swift in Sources */,
 				E4A9F1F82A1363E9000694CE /* RegisterViewModel.swift in Sources */,
 				E4B88FCB2A00F252005FA850 /* CustomPasswordField.swift in Sources */,
@@ -588,6 +615,7 @@
 				E4FD9AAC29F94757009F022A /* ReviewViewModel.swift in Sources */,
 				E4FD9ABC29FFA69C009F022A /* HomeView.swift in Sources */,
 				E4FD9AAA29F94735009F022A /* ReviewsView.swift in Sources */,
+				E42F987E2C2FF28800B0076B /* RouterView.swift in Sources */,
 				E4FD9AAF29F94A4D009F022A /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

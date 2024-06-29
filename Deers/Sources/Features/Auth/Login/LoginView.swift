@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct LoginView: View {
+
+    @EnvironmentObject var router: Router<Routes> // TODO: execute the router in coordinator only
     @State private var showPassword = false
-    @Binding var navigateToHome:Bool
     @State private var showError = false
     @State private var errorMsg = ""
     @ObservedObject var loginVM = LoginViewModel()
@@ -33,7 +34,7 @@ struct LoginView: View {
                                 if loginVM.isLoginComplete {
                                     var res = await loginVM.login()
                                       if res {
-                                          navigateToHome.toggle()
+                                          router.replaceRoot(with: .home)
                                       }
                                 } else if  loginVM.areFieldsEmpty {
                                     showError.toggle()
@@ -51,10 +52,9 @@ struct LoginView: View {
                         }
                         HStack{
                             Text(NSLocalizedString("dont_have_account", comment: "")).foregroundColor(Constants.Colors.labelColor)
-                            NavigationLink{
-                                RegisterView()
-                            } label: {
-                                Text(NSLocalizedString("register", comment: ""))
+
+                            Button(NSLocalizedString("register", comment: "")) {
+                                router.push(to: .register)
                             }
 
                         }
@@ -79,6 +79,6 @@ struct LoginView: View {
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView(navigateToHome: .constant(false))
+        LoginView()
     }
 }
