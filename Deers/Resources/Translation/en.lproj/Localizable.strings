@@ -1,0 +1,42 @@
+/* 
+  Localizable.strings
+  Deers
+
+  Created by Dalal Macbook on 26/04/2023.
+  
+*/
+
+//auth translation
+"email" = "Email";
+"password" = "Password";
+"confirm_password" = "Confirm Password";
+"confirm_password_error" = "Password mismatch";
+"login" = "Login";
+"register" = "Register";
+"registration_request" = "User Registered Successfully";
+"registration_request_msg" = "Please login now";
+"required_fields_error" = "Please fillout all the fields";
+"password_mismatch_error" = "Password mismatch";
+"credential_error" = "wrong email or password";
+"dont_have_account" = "don't have an account?";
+
+//home translation
+"experience_question" = "How was your experience?";
+"notes" = "Notes";
+"phone" = "Phone number";
+"submit" = "Submit";
+"error" = "Error";
+"submit_error" = "Please select a status";
+"add_review" = "Add Review";
+"reviews" = "Reviews";
+"close" = "Close";
+"ok" = "OK";
+"from" = "From";
+"to" = "To";
+"review_status" = "Review Status";
+"review_contact" = "Contact number";
+"review_date" = "Review Date";
+
+// validation
+"email_validation" = "Please enter a valid email";
+"email_already_exist" = "email address is already in use by another accoun";

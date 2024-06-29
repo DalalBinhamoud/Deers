@@ -1,0 +1,42 @@
+/* 
+  Localizable.strings
+  Deers
+
+  Created by Dalal Macbook on 26/04/2023.
+  
+*/
+
+//auth translation
+"email" = "البريد الإلكتروني";
+"password" = "الرقم السري";
+"confirm_password" = "تأكيد الرقم السري";
+"confirm_password_error" = "الرقم السري غير متطابق";
+"login" = "تسجيل الدخول";
+"register" = "التسجيل";
+"registration_request" = "تم التسجيل بنجاح";
+"registration_request_msg" = "الرجاء تسجيل الدخول الآن";
+"required_fields_error" = "الرجاء تعبئة جميع الحقول";
+"password_mismatch_error" = "الرقم السري غير متطابق";
+"credential_error" ="خطأ في البريد الإلكتروني أو كلمة المرور";
+"dont_have_account" = "ليس لديك حساب؟";
+
+//home translation
+"experience_question" = "كيف كانت تجربتك؟";
+"notes" = "الملاحظات";
+"phone" = "رقم الجوال";
+"submit" = "إرسال التقييم";
+"error" = "خطأ";
+"submit_error" = "الرجاء تحديد حالة تجربتك";
+"add_review" = "إضافة تقييم";
+"reviews" = "التقييمات";
+"close" = "إغلاق";
+"ok" = "حسناً";
+"from" = "من";
+"to" = "إلى";
+"review_status" = "حالة التقييم";
+"review_contact" = "رقم التواصل";
+"review_date" = "تاريخ التقييم";
+
+// validation
+"email_validation" = "الرجاء إدخال بريد إلكتروني صحيح";
+"email_already_exist" = "البريد الإلكتروني مستخدم من قبل حساب آخر";
