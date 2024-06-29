@@ -11,18 +11,26 @@ import FirebaseCore
 @main
 struct DeersApp: App {
 
-    func reviewCountConfig(){
-    UserDefaults.standard.set(1, forKey: "counter")
-    }
-
-
     init() {
         FirebaseApp.configure()
         reviewCountConfig()
     }
+
     var body: some Scene {
         WindowGroup {
-            MainView()
+            AppCoordinatorView(isLoggedIn: isLoggedIn())
         }
+    }
+
+    // MARK: - methods
+    private func isLoggedIn() -> Bool {
+        if let isLoggedIn = UserDefaults.standard.object(forKey: "isLoggedIn") {
+            return true
+        }
+        return false
+    }
+
+    private func reviewCountConfig() {
+    UserDefaults.standard.set(1, forKey: "counter")
     }
 }
