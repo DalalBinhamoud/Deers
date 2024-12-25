@@ -85,11 +85,6 @@ extension Color {
 }
 
 struct Constants {
-    struct Colors{
-        static let primaryColor = Color(hex: "#ba952a")
-        static let  secondaryColor = Color(red: 0.01568627450980392, green: 0.1411764705882353, blue: 0.29411764705882354)
-        static let labelColor = Color.white
-    }
 
     struct fixedLists {
         static var reviewStatus = [Status.good,Status.ok,Status.bad]
@@ -105,12 +100,6 @@ struct Constants {
         static let textEditor = 250
         static let phoneField = 10
         static let textLines = 4
-    }
-
-    struct customFontSize {
-        static let largeTxt = CGFloat(30)
-        static let title = CGFloat(24)
-        static let subtitle = CGFloat(18)
     }
 
     struct Regex {

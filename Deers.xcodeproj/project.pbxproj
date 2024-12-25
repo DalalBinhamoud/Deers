@@ -13,6 +13,8 @@
 		E42F987C2C2FEE3C00B0076B /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42F987B2C2FEE3C00B0076B /* Router.swift */; };
 		E42F987E2C2FF28800B0076B /* RouterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42F987D2C2FF28800B0076B /* RouterView.swift */; };
 		E42F98812C2FF3F300B0076B /* AppCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42F98802C2FF3F300B0076B /* AppCoordinatorView.swift */; };
+		E45123DD2D1C323F001EB5F2 /* DesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45123DC2D1C323F001EB5F2 /* DesignSystem.swift */; };
+		E47672E62D1C29B3000F3EE5 /* LoginViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47672E52D1C29B3000F3EE5 /* LoginViewModelProtocol.swift */; };
 		E4A481902A0CF77A003D49D1 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A4818F2A0CF779003D49D1 /* LoginViewModel.swift */; };
 		E4A9F1F62A135E7B000694CE /* CustomEmailField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A9F1F52A135E7B000694CE /* CustomEmailField.swift */; };
 		E4A9F1F82A1363E9000694CE /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A9F1F72A1363E9000694CE /* RegisterViewModel.swift */; };
@@ -60,6 +62,8 @@
 		E42F987B2C2FEE3C00B0076B /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		E42F987D2C2FF28800B0076B /* RouterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterView.swift; sourceTree = "<group>"; };
 		E42F98802C2FF3F300B0076B /* AppCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorView.swift; sourceTree = "<group>"; };
+		E45123DC2D1C323F001EB5F2 /* DesignSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem.swift; sourceTree = "<group>"; };
+		E47672E52D1C29B3000F3EE5 /* LoginViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelProtocol.swift; sourceTree = "<group>"; };
 		E4A4818F2A0CF779003D49D1 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		E4A9F1F52A135E7B000694CE /* CustomEmailField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomEmailField.swift; sourceTree = "<group>"; };
 		E4A9F1F72A1363E9000694CE /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
@@ -153,8 +157,9 @@
 		E412F9882C2F1FDB00CB24C5 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				E47672E42D1C1F62000F3EE5 /* Networking */,
+				E412F98C2C2F218D00CB24C5 /* Main */,
 				E42F987A2C2FEE1B00B0076B /* Routing */,
-				E412F98B2C2F218500CB24C5 /* Features */,
 				E412F98A2C2F214F00CB24C5 /* Utilities */,
 				E412F9892C2F210600CB24C5 /* UI */,
 			);
@@ -173,6 +178,7 @@
 		E412F98A2C2F214F00CB24C5 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				E45123DB2D1C3224001EB5F2 /* DesignSystem */,
 				E4FD9AAD29F94A3C009F022A /* Helpers */,
 				E4FD9AC829FFC6BC009F022A /* Validation */,
 			);
@@ -182,10 +188,8 @@
 		E412F98B2C2F218500CB24C5 /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				E42F987F2C2FF3CE00B0076B /* Coordinator */,
 				E412F9912C2F220F00CB24C5 /* Home */,
 				E412F9902C2F220600CB24C5 /* Auth */,
-				E412F98C2C2F218D00CB24C5 /* Main */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -193,6 +197,8 @@
 		E412F98C2C2F218D00CB24C5 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				E412F98B2C2F218500CB24C5 /* Features */,
+				E42F98802C2FF3F300B0076B /* AppCoordinatorView.swift */,
 				E4FD9A7829F946A4009F022A /* DeersApp.swift */,
 			);
 			path = Main;
@@ -203,6 +209,7 @@
 			children = (
 				E4FD9ABF29FFA6F1009F022A /* LoginView.swift */,
 				E4A4818F2A0CF779003D49D1 /* LoginViewModel.swift */,
+				E47672E52D1C29B3000F3EE5 /* LoginViewModelProtocol.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -263,12 +270,19 @@
 			path = Routing;
 			sourceTree = "<group>";
 		};
-		E42F987F2C2FF3CE00B0076B /* Coordinator */ = {
+		E45123DB2D1C3224001EB5F2 /* DesignSystem */ = {
 			isa = PBXGroup;
 			children = (
-				E42F98802C2FF3F300B0076B /* AppCoordinatorView.swift */,
+				E45123DC2D1C323F001EB5F2 /* DesignSystem.swift */,
 			);
-			path = Coordinator;
+			path = DesignSystem;
+			sourceTree = "<group>";
+		};
+		E47672E42D1C1F62000F3EE5 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		E4B88FC32A00E56C005FA850 /* Fonts */ = {
@@ -595,11 +609,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E42F987C2C2FEE3C00B0076B /* Router.swift in Sources */,
+				E45123DD2D1C323F001EB5F2 /* DesignSystem.swift in Sources */,
 				E4FD9AA329F946E2009F022A /* SubmitReviewView.swift in Sources */,
 				E4FD9AC429FFBDF2009F022A /* SocialMediaIcon.swift in Sources */,
 				E4FD9ACC29FFC92C009F022A /* CustomTextEditor.swift in Sources */,
 				E4FD9AC229FFA703009F022A /* RegisterView.swift in Sources */,
 				E4FD9AA729F946FD009F022A /* Review.swift in Sources */,
+				E47672E62D1C29B3000F3EE5 /* LoginViewModelProtocol.swift in Sources */,
 				E4FD9AC729FFBFC3009F022A /* SocialMediaComponent.swift in Sources */,
 				E4B88FB729FFE8C4005FA850 /* Util.swift in Sources */,
 				E4A481902A0CF77A003D49D1 /* LoginViewModel.swift in Sources */,
