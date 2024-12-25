@@ -6,3 +6,12 @@
 //
 
 import Foundation
+
+protocol LoginViewModelProtocol: ObservableObject {
+    var email: String { get set }
+    var password: String { get set }
+    var errorMessage: String { get }
+    var showError: Bool { get set }
+
+    func performLogin() async
+}

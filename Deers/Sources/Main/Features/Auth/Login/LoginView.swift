@@ -7,53 +7,51 @@
 
 import SwiftUI
 
-struct LoginView: View {
+struct LoginView<ViewModel>: View  where ViewModel: LoginViewModelProtocol {
 
-    @EnvironmentObject var router: Router<Routes> // TODO: execute the router in coordinator only
+    // MARK: - Properties
+    @EnvironmentObject var router: Router<Routes>
     @State private var showPassword = false
-    @State private var showError = false
-    @State private var errorMsg = ""
-    @ObservedObject var loginVM = LoginViewModel()
+    @ObservedObject var viewModel: ViewModel
 
+    init(viewModel: ViewModel) {
+        self._viewModel = .init(wrappedValue: viewModel)
+    }
 
-
+    // MARK: - Body
     var body: some View {
         NavigationStack{
             GeometryReader{ geo in
                 ZStack{
-                    VStack(alignment: .center){
+                    VStack(alignment: .center) {
                         Spacer()
-                        Image("background").resizable().scaledToFit().frame(width: geo.size.width * 0.3, height: geo.size.height * 0.3)
+                        Image(Constant.Image.backgroung)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: geo.size.width * 0.3, height: geo.size.height * 0.3)
 
-                        CustomEmailField(email: $loginVM.email)
+                        CustomEmailField(email: $viewModel.email)
 
-                        CustomPasswordField(password: $loginVM.password, showPassword: $showPassword)
+                        CustomPasswordField(password: $viewModel.password, showPassword: $showPassword)
 
-                        Button(action:  {
-                            Task{
-                                if loginVM.isLoginComplete {
-                                    var res = await loginVM.login()
-                                      if res {
-                                          router.replaceRoot(with: .home)
-                                      }
-                                } else if  loginVM.areFieldsEmpty {
-                                    showError.toggle()
-                                    errorMsg = "required_fields_error"
-                                } else if !Util.isEmailValid(loginVM.email){
-                                    showError.toggle()
-                                    errorMsg = "email_validation"
+                        Button(
+                            action: {
+                                Task{
+                                    await viewModel.performLogin()
                                 }
-
-                            }
-                        } ){
-                            Text(NSLocalizedString("login", comment: "")).btnLabelTextStyle()
-                        }.background(.black.opacity(0.3)).cornerRadius(40).padding().alert(NSLocalizedString("credential_error", comment: ""), isPresented: $loginVM.showError) {
-                            Button(NSLocalizedString("ok", comment: ""), role: .cancel) { }
+                            }, label: {
+                                Text(LocalizedStrings.login).btnLabelTextStyle()
+                            })
+                        .background(
+                            .black.opacity(0.3))
+                        .cornerRadius(40).padding()
+                        .alert(LocalizedStrings.credentialError, isPresented: $viewModel.showError) {
+                            Button(LocalizedStrings.ok, role: .cancel) { }
                         }
                         HStack{
-                            Text(NSLocalizedString("dont_have_account", comment: "")).foregroundColor(Constants.Colors.labelColor)
+                            Text(LocalizedStrings.dontHaveAccount).foregroundColor(DesignSystem.Colors.labelColor)
 
-                            Button(NSLocalizedString("register", comment: "")) {
+                            Button(LocalizedStrings.register) {
                                 router.push(to: .register)
                             }
 
@@ -61,24 +59,55 @@ struct LoginView: View {
 
                         Spacer()
                     }.padding()
-                }.background(Constants.Colors.secondaryColor)
+                }.background(DesignSystem.Colors.secondaryColor)
 
-            }  .alert(NSLocalizedString("error", comment: ""), isPresented: $showError){
-                Button(NSLocalizedString("close", comment: "")){}
+            }  .alert(LocalizedStrings.error, isPresented: $viewModel.showError){
+                Button(LocalizedStrings.close){
+
+                }
             } message:{
-                Text(NSLocalizedString(errorMsg, comment: ""))
+                Text(viewModel.errorMessage)
             }
         }
 
     }
+}
 
-    func submitLogin(){
-        
+private enum Constant {
+    enum Image {
+        static let backgroung = "backgroung"
+    }
+
+    enum Size {
+        static let large = 0.3
     }
 }
 
+private enum LocalizedStrings {
+    static let close = String(localized: "close")
+    static let credentialError = String(localized: "credential_error")
+    static let dontHaveAccount = String(localized: "dont_have_account")
+    static let error = String(localized: "error")
+    static let login = String(localized: "login")
+    static let ok = String(localized: "ok")
+    static let register = String(localized: "register")
+}
+
+// MARK: - Preview
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView()
+        LoginView(
+            viewModel: ViewModelFixture()
+        )
+    }
+}
+
+extension LoginView_Previews {
+    class ViewModelFixture: LoginViewModelProtocol {
+        var email = ""
+        var password = ""
+        var errorMessage = ""
+        var showError = false
+        func performLogin() async { }
     }
 }
