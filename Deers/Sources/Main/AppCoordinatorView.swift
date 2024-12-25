@@ -22,7 +22,9 @@ struct AppCoordinatorView: View {
         RouterView(router: router) { route in
             switch route {
             case .login:
-                LoginView()
+                LoginView(viewModel: LoginViewModel(onLogin: {
+                    router.replaceRoot(with: .home)
+                }))
             case .register:
                 RegisterView()
             case .home:
